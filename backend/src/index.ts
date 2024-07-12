@@ -1,0 +1,40 @@
+// to use .env environment variables file
+import dotenv from 'dotenv';
+dotenv.config();
+
+import express, { Request, Response } from 'express';
+import cors from 'cors';
+import textRoutes from './routes/textRoutes';
+import { errorHandler } from './controllers/textControllers';
+
+
+const app = express();
+
+// use cors to allow requests from other origins
+app.use(cors());
+
+// show static content with 'static' middleware
+app.use(express.static('dist'));
+
+// use express json-parser
+app.use(express.json());
+
+app.use('/api', textRoutes);
+
+app.get('/', (request, response) => {
+    response.send('Hello World');
+});
+
+const unknownEndpoint = (request: Request, response: Response) => {
+    response.status(404).send({ error: 'unknown endpoint' });
+};
+
+// use unknown endpoint and error handler middleware
+app.use(unknownEndpoint);
+app.use(errorHandler);
+
+// set and use PORT 3001
+const port = process.env.PORT || 3001;
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});

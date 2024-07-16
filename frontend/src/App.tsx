@@ -4,10 +4,11 @@ import Navbar from './components/NavBar';
 import About from './pages/About';
 import Work from './pages/Work';
 import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <>
+    <main>
       <Router>
         <Navbar />
         <Routes>
@@ -19,7 +20,8 @@ const App: React.FC = () => {
       <About />
       <Work />
       <Contact />
-    </>
+      <Footer />
+    </main>
   )
 }
 

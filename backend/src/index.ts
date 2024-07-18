@@ -4,9 +4,10 @@ dotenv.config();
 
 import express, { Request, Response } from 'express';
 import cors from 'cors';
+
+import weatherRoutes from './routes/weatherRoutes';
 import textRoutes from './routes/textRoutes';
 import { errorHandler } from './controllers/textControllers';
-
 
 const app = express();
 
@@ -19,7 +20,11 @@ app.use(express.static('dist'));
 // use express json-parser
 app.use(express.json());
 
+// use text routes
 app.use('/api', textRoutes);
+
+// use weather routes
+app.use('/api/weather', weatherRoutes);
 
 app.get('/', (request, response) => {
     response.send('Hello World');

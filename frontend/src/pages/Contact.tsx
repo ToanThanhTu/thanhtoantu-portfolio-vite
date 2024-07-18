@@ -14,7 +14,7 @@ const iconMap: { [key: string]: JSX.Element } = {
 
 function Contact() {
     return (
-        <div className="portfolio-width py-96 text-center">
+        <section id='contact-section' className="portfolio-width md:py-96 py-40 text-center px-8">
             <p className='italic'>Let's work together!</p>
             <h2 className='font-semibold'>Contact Me</h2>
             <ul className='flex justify-center space-x-4 mt-10'>
@@ -26,7 +26,7 @@ function Contact() {
                     );
                 })}
             </ul>
-        </div>
+        </section>
     );
 }
 

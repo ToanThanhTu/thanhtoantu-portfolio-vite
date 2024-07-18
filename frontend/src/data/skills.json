@@ -1,7 +1,7 @@
 [
     {
         "name": "Programming Languages",
-        "content": "JavaScript, Java, Pega, SQL, TypeScript"
+        "content": "JavaScript, Java, SQL, TypeScript, Pega"
     },
     {
         "name": "Frontend Development",
@@ -9,7 +9,7 @@
     },
     {
         "name": "Backend Development",
-        "content": "Node.js, Express.js, RESTful APIs, MongoDB, Mongoose"
+        "content": "Node.js, Express.js, RESTful APIs, MongoDB, Mongoose, Pega Platform"
     },
     {
         "name": "Tools",

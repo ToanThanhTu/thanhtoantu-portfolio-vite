@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import { getAllTexts, createText } from '../controllers/textControllers';
 
-const router = Router();
+const textRouter = Router();
 
-router.get('/texts', getAllTexts);
-router.post('/texts', createText);
+textRouter.get('/texts', getAllTexts);
+textRouter.post('/texts', createText);
 
-export default router;
+export default textRouter;

@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import Text from '../models/text';
 
-export const getAllTexts = async (request: Request, response: Response, next) => {
+export const getAllTexts = async (request: Request, response: Response, next: any) => {
     try {
         const texts = await Text.find();
         response.json(texts);
@@ -10,7 +10,7 @@ export const getAllTexts = async (request: Request, response: Response, next) =>
     }
 };
 
-export const createText = async (request: Request, response: Response, next) => {
+export const createText = async (request: Request, response: Response, next: any) => {
     const { name, content } = request.body;
     const text = new Text({ name, content });
 
@@ -22,7 +22,7 @@ export const createText = async (request: Request, response: Response, next) => 
     }
 };
 
-export const errorHandler = (error: Error, request: Request, response: Response, next) => {
+export const errorHandler = (error: Error, request: Request, response: Response, next: any) => {
     console.error(error.message);
     next(error);   
 }

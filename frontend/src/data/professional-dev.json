@@ -1,6 +1,6 @@
 [
     {
-        "name": "Java 17 Masterclass Course 2024",
+        "name": "Java 17 Masterclass",
         "origin": "Udemy"
     },
     {
@@ -18,5 +18,9 @@
     {
         "name": "Full Stack Open",
         "origin": "University of Helsinki"
+    },
+    {
+        "name": "Pega Certified Senior System Architect",
+        "origin": "Pega Academy"
     }
 ]

@@ -29,7 +29,7 @@
 
 @layer components {
   .btn {
-    @apply px-4 py-2 rounded-sm font-semibold bg-primary-black text-white;
+    @apply px-4 py-2 rounded-sm font-semibold bg-primary-black text-white inline-block flex justify-center items-center;
   }
 }
 

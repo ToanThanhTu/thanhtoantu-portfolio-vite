@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node dist/index.ts",
     "dev": "nodemon --exec ts-node src/index.ts",
+    "build:ui": "@powershell Remove-Item -Recurse -Force dist && cd ../frontend && npm run build && @powershell Copy-Item dist -Recurse ../backend",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

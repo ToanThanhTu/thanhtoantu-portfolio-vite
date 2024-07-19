@@ -14,7 +14,7 @@ const app = express();
 // use cors to allow requests from other origins
 app.use(cors());
 
-// show static content with 'static' middleware
+// show frontend production build static content with 'static' middleware
 app.use(express.static('dist'));
 
 // use express json-parser

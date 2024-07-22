@@ -1,13 +1,20 @@
 # Thanh Toan Tu Portfolio Source Code
 
-This is the complete source code for my portfolio project, including frontend and backend code.  
+This is the complete source code for my portfolio project, including frontend and backend code.
+
 Only backend is needed for local run.
+
+This project frontend is deployed to GitHub Pages and backend is deployed to Fly.io.
+
+GitHub Pages: https://toanthanhtu.github.io/thanhtoantu-portfolio-frontend/
+
+Fly.io: https://thanhtoantu-portfolio-backend.fly.dev
 
 ## Folder Structure
 
 ```
 thanhtoantu-portfolio-vite
-├───frontend
+├───frontend (submodule)
 │   └───src
 │       ├───assets
 │       ├───components
@@ -15,7 +22,7 @@ thanhtoantu-portfolio-vite
 │       ├───data
 │       ├───pages
 │       └───services
-└───backend
+└───backend (submodule)
     ├───dist
     ├───requests
     └───src
@@ -28,6 +35,8 @@ thanhtoantu-portfolio-vite
 
 To run this project locally:
 
+1. Clone this repository with submodules: `git clone --recurse-submodules https://github.com/ToanThanhTu/thanhtoantu-portfolio-vite.git`.
+1. cd into 'backend' and 'frontend' directories and make sure that they are on the correct git remote url and branch by running `git remote -v` and `git branch`.
 1. Install dependencies
     1. cd into `backend` and `frontend` folders.
     1. Run `npm install` to install necessary dependencies or `npm install --include=dev` to also install dev dependencies for development.
@@ -66,6 +75,7 @@ To run this project locally:
 - TailWindCSS
 - Material UI
 - Axios
+- GitHub Pages
 
 ### Backend
 
@@ -76,3 +86,4 @@ To run this project locally:
 - Cors
 - Dotenv
 - Nodemon
+- Fly.io

@@ -2,33 +2,58 @@
 
 This is the complete source code for my portfolio project, including frontend and backend code.
 
-Only backend is needed for local run.
-
-This project frontend is deployed to GitHub Pages and backend is deployed to Fly.io.
+This project is deployed to GitHub Pages and Fly.io.
 
 GitHub Pages: https://toanthanhtu.github.io/thanhtoantu-portfolio-frontend/
 
 Fly.io: https://thanhtoantu-portfolio-backend.fly.dev
 
-## Folder Structure
+## Project Structure
 
 ```
 thanhtoantu-portfolio-vite
 ├───frontend (submodule)
 │   └───src
+│       ├───main.tsx
+│       ├───App.tsx
+│       ├───index.css
 │       ├───assets
+│       │   └───...
 │       ├───components
+│       │   ├───Footer.tsx
+│       │   ├───NavBar.tsx
+│       │   ├───ScrollTopButton.tsx
+│       │   └───Weather.tsx
 │       ├───context
+│       │   └───WeatherContext.tsx
 │       ├───data
+│       │   └───...
 │       ├───pages
+│       │   ├───About.tsx
+│       │   ├───Contact.tsx
+│       │   ├───Work.tsx
 │       └───services
+│           └───weather.ts
 └───backend (submodule)
     ├───dist
+    │   └───...
     ├───requests
+    │   └───...
     └───src
+        ├───index.ts
+        ├───app.ts
         ├───controllers
+        │   ├───textController.ts
+        │   └───weatherController.ts
         ├───models
-        └───routes
+        │   └───text.ts
+        ├───routes
+        │   ├───textRoutes.ts
+        │   └───weatherRoutes.ts
+        └───utils
+            ├───config.ts
+            ├───logger.ts
+            └───middleware.ts
 ```
 
 ## Install and Run
@@ -44,17 +69,17 @@ To run this project locally:
     1. Create a free [MongoDB Atlas](https://www.mongodb.com/atlas) database and get the Connect URL to the database.
     1. Create a free [Open Weather API](https://openweathermap.org/api) account and get the API Key.
     1. Create an .env file in the `backend` directory, and add to the file:
-        1. `WEATHER_KEY`  
-            - E.g. `WEATHER_KEY="5r12t34h5v6e789c0ii12345ab67c"`
+        1. `WEATHER_API_KEY`  
+            - E.g. `WEATHER_API_KEY="5r12t34h5v6e789c0ii12345ab67c"`
         1. `MONGODB_URI`
             - E.g. `MONGODB_URI="mongodb+srv://<username>:<password>@data.s1sbewn.mongodb.net/<databaseName>?retryWrites=true&w=majority&appName=data"`
         1. and `PORT=3001`
+1. Run `npm run build:ui` to create and copy the frontend production build to backend
 1. Run `npm run dev` on `backend` directory to start.
 1. Open `http://localhost:3001` on the browser.
 1. For frontend development:
     1. Run `npm run dev` on both directories.
     1. Open `http://localhost:5173` on the browser.
-    1. Run `npm run build:ui` on the `backend` directory to create frontend production build. 
 
 ## Features
 
